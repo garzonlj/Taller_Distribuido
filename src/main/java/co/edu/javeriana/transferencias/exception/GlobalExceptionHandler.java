@@ -1,4 +1,4 @@
-package com.universidad.transferencias.exception;
+package co.edu.javeriana.transferencias.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
