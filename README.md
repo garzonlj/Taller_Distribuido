@@ -152,8 +152,6 @@ transferencias-distribuidas/
 | POST | `/api/transferencias` | Ejecutar transferencia SAGA |
 | GET | `/api/cuentas/nacional` | Listar cuentas PostgreSQL |
 | GET | `/api/cuentas/internacional` | Listar cuentas MySQL |
-| POST | `/api/config/simular-fallo` | Activar/desactivar fallo en MySQL |
-| GET | `/api/stats` | Estadísticas del sistema |
 
 ---
 
