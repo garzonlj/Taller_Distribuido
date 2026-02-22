@@ -1,4 +1,4 @@
-package com.universidad.transferencias.model;
+package co.edu.javeriana.transferencias.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -48,3 +48,4 @@ public class Movimiento {
         fecha = LocalDateTime.now();
     }
 }
+
