@@ -12,7 +12,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.universidad</groupId>
+    <groupId>co.edu.javeriana</groupId>
     <artifactId>transferencias-distribuidas</artifactId>
     <version>1.0.0</version>
     <name>Transferencias Distribuidas PostgreSQL MySQL</name>
