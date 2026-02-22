@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Sistema de Transferencias Distribuidas - SAGA</title>
+</head>
+<body>
+<header>
+    <div>
+        <h1>Sistema de Transferencias Distribuidas</h1>
+    </div>
+</header>
+
+<div class="container">
+    <div class="grid">
+        <!-- Formulario de transferencia -->
+        <div class="card">
+            <h2>Nueva Transferencia</h2>
+
+            <div class="form-group">
+                <label>Cuenta Origen <span class="pg-badge">(Banco Nacional · PostgreSQL)</span></label>
+                <select id="cuentaOrigen">
+                    <option value="">Cargando cuentas...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Cuenta Destino <span class="my-badge">(Banco Internacional · MySQL)</span></label>
+                <select id="cuentaDestino">
+                    <option value="">Cargando cuentas...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Monto</label>
+                <input type="number" id="monto" placeholder="0.00" min="0.01" step="0.01" />
+            </div>
+
+            <button class="btn btn-primary" id="btnTransferir" onclick="realizarTransferencia()">
+                Ejecutar Transferencia SAGA
+            </button>
+
+            <div id="resultado" class="result"></div>
+
+
+        </div>
+
+        <!-- Panel de cuentas -->
+        <div class="card">
+            <h2>Estado de Cuentas</h2>
+            <div style="margin-bottom:12px">
+                <strong class="pg-badge">Banco Nacional (PostgreSQL)</strong>
+                <div class="accounts-grid" id="cuentasNacional" style="margin-top:8px">
+                    <div class="loading-text"><span class="spinner">⟳</span> Cargando...</div>
+                </div>
+            </div>
+            <hr style="border-color:#334155; margin:16px 0">
+            <div>
+                <strong class="my-badge">Banco Internacional (MySQL)</strong>
+                <div class="accounts-grid" id="cuentasInternacional" style="margin-top:8px">
+                    <div class="loading-text"><span class="spinner">⟳</span> Cargando...</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Historial -->
+    <div class="history card">
+        <h2>Historial de Transferencias</h2>
+        <div id="historial">
+            <p style="color:#475569; font-size:0.85rem">Las transferencias realizadas aparecerán aquí.</p>
+        </div>
+    </div>
+</div>
+
+
+<script src="js.js"></script>
+
+</body>
+</html>
