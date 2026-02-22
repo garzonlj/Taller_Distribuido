@@ -1,4 +1,4 @@
-package com.universidad.transferencias.model;
+package co.edu.javeriana.transferencias.model;
 
 public enum EstadoTransferencia {
     INICIADA,
@@ -8,3 +8,4 @@ public enum EstadoTransferencia {
     FALLIDA,
     REVERTIDA
 }
+
