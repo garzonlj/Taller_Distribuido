@@ -1,4 +1,4 @@
-package com.universidad.transferencias.config;
+package main.java.co.edu,javeriana.transferencias.config;
 
 import jakarta.persistence.EntityManagerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
