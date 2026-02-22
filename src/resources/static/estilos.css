@@ -1,0 +1,142 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    min-height: 100vh;
+}
+header {
+    background: linear-gradient(135deg, #1e3a5f, #1a2e5a);
+    border-bottom: 2px solid #3b82f6;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+header h1 { font-size: 1.5rem; color: #fff; }
+header span { font-size: 0.9rem; color: #94a3b8; }
+.badge {
+    background: #3b82f6;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+.card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+}
+.card h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.pg-badge { color: #60a5fa; }
+.my-badge { color: #f97316; }
+.form-group { margin-bottom: 16px; }
+label { display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 6px; font-weight: 500; }
+select, input {
+    width: 100%;
+    padding: 10px 14px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+select:focus, input:focus { outline: none; border-color: #3b82f6; }
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.btn-primary { background: #3b82f6; color: white; }
+.btn-primary:hover { background: #2563eb; transform: translateY(-1px); }
+.btn-primary:disabled { background: #475569; cursor: not-allowed; transform: none; }
+.btn-warning { background: #f59e0b; color: #0f172a; margin-top: 8px; }
+.btn-warning:hover { background: #d97706; }
+.btn-sm { padding: 6px 12px; font-size: 0.8rem; width: auto; }
+
+/* Result panel */
+.result {
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    border-left: 4px solid;
+    display: none;
+}
+.result.COMPLETADA  { background: #052e16; border-color: #22c55e; }
+.result.REVERTIDA   { background: #1c1917; border-color: #f59e0b; }
+.result.FALLIDA     { background: #1c0505; border-color: #ef4444; }
+.result-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; }
+.result-detail { font-size: 0.85rem; color: #94a3b8; line-height: 1.7; }
+.result-ref { font-family: monospace; font-size: 0.95rem; color: #60a5fa; }
+
+/* Cuentas */
+.accounts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.account-card {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+}
+.account-num { font-weight: 600; color: #60a5fa; }
+.account-name { color: #94a3b8; font-size: 0.78rem; }
+.account-balance { color: #22c55e; font-weight: 600; margin-top: 4px; }
+
+/* History */
+.history { margin-top: 24px; }
+.history h2 { font-size: 1rem; font-weight: 600; margin-bottom: 12px; color: #94a3b8; }
+.history-item {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+.estado-badge {
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.estado-COMPLETADA { background: #052e16; color: #22c55e; border: 1px solid #22c55e; }
+.estado-REVERTIDA  { background: #1c1917; color: #f59e0b; border: 1px solid #f59e0b; }
+.estado-FALLIDA    { background: #1c0505; color: #ef4444; border: 1px solid #ef4444; }
+
+/* Fallo toggle */
+.fallo-panel {
+    background: #2d1515;
+    border: 1px solid #7f1d1d;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+}
+.fallo-panel h3 { font-size: 0.9rem; color: #fca5a5; margin-bottom: 8px; }
+.fallo-panel p { font-size: 0.8rem; color: #94a3b8; margin-bottom: 10px; }
+.toggle-row { display: flex; align-items: center; gap: 10px; }
+.toggle-status { font-size: 0.85rem; font-weight: 600; }
+.on { color: #ef4444; } .off { color: #22c55e; }
+
+.spinner { display: inline-block; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text { color: #94a3b8; font-size: 0.9rem; }
